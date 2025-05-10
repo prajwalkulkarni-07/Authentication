@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: auth-tutorial
+    env: node
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        fromDatabase:
+          name: port
+          property: port
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: MAILTRAP_TOKEN
+        sync: false

@@ -1,0 +1,3 @@
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && node index.js",
+    "dev": "concurrently -n \"frontend,backend\" -c \"bgBlue, bgYellow\" \"npm run frontend\" \"npm run backend\""
